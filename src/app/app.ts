@@ -1,0 +1,26 @@
+// import { Component, signal } from '@angular/core';
+// import { RouterOutlet } from '@angular/router';
+
+// @Component({
+//   selector: 'app-root',
+//   imports: [RouterOutlet],
+//   templateUrl: './app.html',
+//   styleUrl: './app.css'
+// })
+// export class App {
+//   protected readonly title = signal('login-dashboard');
+// }
+
+import { Component, signal } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [RouterOutlet], // RouterOutlet to render routes
+  templateUrl: './app.component.html', // root template
+  // styleUrls: ['./app.component.css'],
+})
+export class App {
+  protected readonly title = signal('login-dashboard');
+}

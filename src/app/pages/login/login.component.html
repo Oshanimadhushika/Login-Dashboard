@@ -1,0 +1,30 @@
+<div class="flex items-center justify-center h-screen bg-white">
+  <div class="bg-white/30 p-8 rounded shadow-md w-96">
+    <h2 class="text-2xl font-bold mb-6 text-center">Login</h2>
+
+    <div *ngIf="errorMessage" class="text-red-600 mb-3">
+      {{ errorMessage }}
+    </div>
+
+    <input
+      type="email"
+      placeholder="Email"
+      [(ngModel)]="email"
+      class="w-full mb-4 p-2 border rounded"
+    />
+
+    <input
+      type="password"
+      placeholder="Password"
+      [(ngModel)]="password"
+      class="w-full mb-4 p-2 border rounded"
+    />
+
+    <button
+      (click)="submitLogin()"
+      class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700"
+    >
+      {{ loading ? "Logging in..." : "Login" }}
+    </button>
+  </div>
+</div>
